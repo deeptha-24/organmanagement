@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+ crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<!--Google Fonts-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;900&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+<html>
+
+<head>
+	<title>Login Page</title>
+</head>
+<style>
+    body {
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat';
+    }
+    
+    p {
+        color: #8f8f8f;
+    }
+    
+    /*Headings*/
+    
+    .big-heading {
+        font-family: 'Montserrat';
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    
+    .section-heading {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    
+    /*Containers*/
+    
+    .container-fluid {
+        padding: 7% 15%;
+    }
+    
+    /*Sections*/
+    
+    .colored-section {
+        background-color: #ff4c68;
+        color: #fff;
+    }
+    
+    .white-section {
+        background-color: white;
+    }
+    
+    /*Navigation Bar*/
+    
+    .navbar {
+        padding: 0 0 4.5rem;
+    }
+    
+    .navbar-brand {
+        font-family: 'Ubuntu';
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    
+    .nav-item {
+        padding: 0 18px;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        font-family: 'Montserrat';
+        font-weight: 200;
+    }
+    
+    /*Download Buttons*/
+    
+    .download-button {
+        margin: 5% 3% 5% 0;
+    }
+    
+    /*Title Section*/
+    
+    #title {
+        /*height: 600px;*/
+        text-align: left;
+    }
+    
+    #title .container-fluid {
+        padding: 3% 15% 7%;
+    }
+    
+    /*Title Image*/
+    .title-image {
+        width: 60%;
+        transform: rotate(25deg);
+        position: absolute;
+        /*z-index: -1;*/
+        right: 30%;
+    }
+    
+    @media (max-width: 1028px) {
+        #title {
+            text-align: center;        
+        }
+        .title-image {
+            position: static;
+            transform: rotate(0);
+        }
+    }
+    
+    /*Features*/
+    
+    #features {
+        position: relative;
+        /*z-index: 1;*/
+    }
+    
+    .feature-headings {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .feature-box {
+        padding: 5% ;
+    }
+    
+    .feature-headings {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .feature-description {
+        color: 8f8f8f;
+    }
+    
+    .feature-icon {
+        color: #ef8172;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-icon:hover {
+        color: #ff4c68;
+    }
+    
+    /*Testimonial Section*/
+    
+    #testimonials {
+        background-color: #ef8172;
+    }
+    
+    .testimonial-text {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    
+    .testimonial-image {
+        width: 10%;
+        border-radius: 100%;
+        margin: 20px;
+    }
+    
+    #press {
+        background-color: #ef8172;
+        padding-bottom: 3%;
+    }
+    
+    .press-logo {
+        width: 15%;
+        margin: 20px 20px 50px;
+    }
+    
+    .carousel-item {
+        height: 500px;
+    }
+    
+    /*Pricing Section*/
+    
+    #pricing {
+        padding: 100px;
+    }
+    
+    .price-text {
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    
+    .price-category {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .pricing-column {
+        padding: 3% 2%;
+    }
+    
+    /*Footer Section*/
+    
+    .social-media-icons {
+        margin: 20px 10px;
+    }
+    
+    
+    
+    
+    
+    /*
+    
+    
+    /*body {
+        padding: 50px;
+    }*
+    
+    .navbar {
+        
+        padding: 15px;
+        background-color: #82aae3;
+        color: #fff;
+    }
+    
+    .heading {
+        background-color: #fff;
+        color: #91d8e4;
+        /*font-family: 'Montserrat';*
+        font-weight: 900;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .card {
+        background-color: #bfeaf5;
+        color: #fff;
+    }
+    
+    .Button_link {
+        color: #fff;
+    }
+    
+    .Buttonss {
+        width: 50%;
+    }*/
+</style>
+
+<body>
+	<nav class="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
+		<form action="/home">
+			<button style="border: 0px solid transparent; color: white;" class="btn btn-outline-dark">HOME</button>
+		</form>
+		<form class="form-inline" action="/logout">
+			<label style="color:white; padding-right: 10px">Hi {{session.get('username')}}!</label>
+			<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+		</form>
+		
+		
+	</nav>
+	<section id="title" class="colored-section">
+		<div class="container-fluid">
+			<!-- <nav class="navbar navbar-expand-lg navbar-dark">
+				<a class="navbar-brand" href="">donorg</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+				  <ul class="navbar-nav ms-auto">
+					  <li class="nav-item">
+						  <a class="nav-link" href="#footer">Contact</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="#pricing">Pricing</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="#cta">Download</a>
+					  </li>
+				  </ul>
+				</div>
+			  </nav> -->
+			  <!--<div>
+				<center>
+					<h1 class="big-heading"></h1>
+				</center>
+			</div>-->
+			  <div class="row">
+				<div class="col-lg-6">
+				  <h1 class="big-heading">Organ Donation and Procurement Management System</h1>
+				  <!--<button type="button" class="btn btn-dark btn-lg download-button"><i class="fa-brands fa-apple"></i>Download</button>
+				  <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-google-play"></i>Download</button>-->
+				</div>
+				<div class="col-lg-6" style="position: relative;">
+				  <img class="title-image" src="{{ url_for('static', filename='title_pic.png') }}" alt="image">
+				</div>
+			  </div>
+			</div>
+		
+		  </section>
+		  <!-- <section id="features" class="white-section">
+			<div class="container-fluid">
+			<div class="row">
+			  <div class="feature-box col-lg-4">
+				<i class="fa-solid fa-circle-check feature-icon fa-4x"></i>
+				<h3 class="feature-headings">Easy to use.</h3>
+				<p class="feature-description">So easy to use, even your dog could do it.</p>
+			  </div>
+			  <div class="feature-box col-lg-4">
+				<i class="fa-solid fa-bullseye feature-icon fa-4x"></i>      
+				<h3 class="feature-headings">Elite Clientele</h3>
+				<p class="feature-description">We have all the dogs, the greatest dogs.</p>
+			  </div>
+			  <div class="feature-box col-lg-4">
+				<i class="fa-solid fa-heart feature-icon fa-4x"></i>
+				<h3 class="feature-headings">Guaranteed to work.</h3>
+				<p class="feature-description">Find the love of your dog's life or your money back.</p>
+			  </div>
+			</div>
+		</div>
+	</section>
+	<section id="testimonials" class="colored-section">
+
+		<div id="testimonial-carousel" class="carousel slide" data-bs-ride="false">
+		  <div class="carousel-inner">
+			<div class="carousel-item active container-fluid">
+			  <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+		<img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+		<em>Pebbles, New York</em>
+			</div>
+			<div class="carousel-item container-fluid">
+			  <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+		<img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+		<em>Beverly, Illinois</em>
+			</div>
+			
+		  </div>
+		  <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+	
+	  </section>
+	
+	
+	  <!-- Press -->
+	
+	  <!-- <section id="press" class="colored-section">
+		<img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+		<img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+		<img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo">
+		<img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+	 -->
+	
+		<!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000" data-bs-pause="hover">
+		  <div class="carousel-inner">
+			<div class="carousel-item active" style="background-color: red;">
+			  <img class="d-block w-100" src="..." alt="First slide">
+			</div>
+			<div class="carousel-item" style="background-color: yellow;">
+			  <img class="d-block w-100" src="..." alt="Second slide">
+			</div>
+			<div class="carousel-item" style="background-color: blue;">
+			  <img class="d-block w-100" src="..." alt="Third slide">
+			</div>
+		  </div>
+		</div>-->
+	
+	  </section>
+	
+	
+	  <!-- Pricing -->
+	
+	  <section id="pricing" class="white-section">
+	
+		<!-- <h2 class="section-heading">A Plan for Every Dog's Needs</h2>
+		<p>Simple and affordable price plans for your and your dog.</p> -->
+	 
+		<div class="row">
+			<div class="pricing-column col-md-6">
+				<div class="card">
+			  		<div class="card-header">
+						<h3 class="price-category">User</h3>
+			  		</div>
+					<div class="card-body">
+						<form action="/search_detail" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">View/Update/Delete User Details</button>
+						</form>
+					</div>		
+				</div>
+			</div>	
+			<div class="pricing-column col-md-6">
+				<div class="card">
+			  		<div class="card-header">
+						<h3 class="price-category">Search</h3>
+			  		</div>
+			  		<div class="card-body">
+						<form action="/search_User_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search User by Details</button>
+						</form>							
+						<form action="/search_Patient_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Patient by Details</button>
+						</form>
+						<form action="/search_Donor_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Donor by Details</button>
+						</form>								
+						<form action="/search_Organ_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Organ by Details</button>
+						</form>							
+						<form action="/search_Organization_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Organization by Details</button>
+						</form>							
+						<form action="/search_Organization_head_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Organization Head by Details</button>
+						</form>							
+						<form action="/search_Doctor_details" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Doctor Details</button>
+						</form>							
+						<form action="/search_Transaction" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Transaction Details</button>
+						</form>							
+						<form action="/search_log" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Search Log Details</button>
+						</form>							
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		  	<div class="pricing-column col-md-6">
+				<div class="card">
+			  		<div class="card-header">
+						<h3 class="price-category">Add</h3>
+			  		</div>
+			  		<div class="card-body">
+						<form action="/add_User_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add User</button>
+						</form>					
+						<form action="/add_User_phone_no_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add User Phone Number</button>
+						</form>				
+						<form action="/add_Patient_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Patient</button>
+						</form>					
+						<form action="/add_Donor_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Donor</button>
+				  		</form>				
+						<form action="/add_Organ_available_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Organ</button>
+						</form>							
+				  		<form action="/add_Doctor_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Doctor</button>
+				  		</form>					
+				  		<form action="/add_Doctor_phone_no_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Doctor Phone Number</button>
+				  		</form>			
+						<form action="/add_Organization_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Organization</button>
+						</form>			
+						<form action="/add_Organization_phone_no_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Organization Phone Number</button>
+						</form>			
+						<form action="/add_Organization_head_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Organization Head</button>
+						</form>			
+						<form action="/add_Transaction_page" method="POST">
+							<button class="btn btn-outline-dark" style="width:55%" type="submit">Add Transaction</button>
+						</form>					
+					</div>
+			  	</div>
+			</div>
+			<div class="pricing-column col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h3 class="price-category">Update</h3>
+				  	</div>
+				  	<div class="card-body">
+						<form action="/update_user_page" method="POST">
+							<button class="btn btn-outline-drak" style="width: 55%;" type="submit">Update User</button>
+						</form>				
+						<form action="/update_doctor_page" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Update Doctor</button>
+						</form>					
+						<form action="/update_organization_page" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Update Organization</button>
+						</form>				
+								<!-- <br>
+						<center>
+									<div>
+										<form action="/update_organization_head_page" method="POST">
+											<button class="btn btn-primary" style="width: 25%;" type="submit">Update Organization Head</button>
+										</form>
+									</div>
+								</center> -->						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="pricing-column col-md-6">
+				<div class="card">
+				  	<div class="card-header">
+						<h3 class="price-category">Remove</h3>
+				  	</div>
+				  	<div class="card-body">					
+						<form action="/remove_user" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Remove User</button>
+						</form>					
+						<form action="/remove_patient" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Remove Patient</button>
+						</form>					
+						<form action="/remove_donor" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Remove Donor</button>
+						</form>					
+						<form action="/remove_doctor" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Remove Doctor</button>
+						</form>					
+						<form action="/remove_organization" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Remove Organization</button>
+						</form>					  
+						<form action="/remove_organization_head" method="POST">
+							<button class="btn btn-outline-dark" style="width: 55%;" type="submit">Remove Organization Head</button>
+						</form>						
+					</div>
+				</div>
+			</div>
+			<div class="pricing-column col-md-6">
+				<div class="card">
+					<div class="card-header">
+						<h3 class="price-category">Statistics</h3>
+				  	</div>
+					<div class="card-body">						
+					</div>
+				</div>
+			</div>
+		</div>
+
+	  </section>
+	
+	
+	  <!-- Call to Action -->
+	
+	  <!-- <section id="cta" class="colored-section">
+		<div class="container-fluid">
+		<h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
+		<div class="text-center">
+		  <button type="button" class="btn btn-dark btn-lg download-button"><i class="fa-brands fa-apple"></i>Download</button>
+		  <button type="button" class="btn btn-light btn-lg download-button"><i class="fa-brands fa-google-play"></i>Download</button>
+		</div>
+		</div>
+	
+	  </section> -->
+	
+	
+	  <!-- Footer -->
+	
+	  <!-- <footer id="footer" class="white-section">
+		<div class="container-fluid">
+		<i class="social-media-icons fa-brands fa-twitter"></i>
+		<i class="social-media-icons fa-brands fa-facebook"></i>
+		<i class="social-media-icons fa-brands fa-instagram"></i>
+		<i class="social-media-icons fa-sharp fa-solid fa-envelope"></i>
+	
+		<p>© Copyright TinDog</p>
+		</div>
+	  </footer>  
+
+ -->
+
+	
+</body>
+
+</html>

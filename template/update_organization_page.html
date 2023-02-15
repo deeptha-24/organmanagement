@@ -1,0 +1,285 @@
+<!doctype HTML>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;900&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<html>
+<title>Update Details</title>
+<style>
+    body {
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat';
+    }
+    
+    p {
+        color: #8f8f8f;
+    }
+    
+    /*Headings*/
+    
+    .big-heading {
+        font-family: 'Montserrat';
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    
+    .section-heading {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    
+    /*Containers*/
+    
+    .container-fluid {
+        padding: 7% 15%;
+    }
+    
+    /*Sections*/
+    
+    .colored-section {
+        background-color: #ff4c68;
+        color: #fff;
+    }
+    
+    .white-section {
+        background-color: white;
+    }
+    
+    /*Navigation Bar*/
+    
+    .navbar {
+        padding: 0 0 4.5rem;
+    }
+    
+    .navbar-brand {
+        font-family: 'Ubuntu';
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    
+    .nav-item {
+        padding: 0 18px;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        font-family: 'Montserrat';
+        font-weight: 200;
+    }
+    
+    /*Download Buttons*/
+    
+    .download-button {
+        margin: 5% 3% 5% 0;
+    }
+    
+    /*Title Section*/
+    
+    #title {
+        /*height: 600px;*/
+        text-align: left;
+    }
+    
+    #title .container-fluid {
+        padding: 3% 15% 7%;
+    }
+    
+    /*Title Image*/
+    .title-image {
+        width: 60%;
+        transform: rotate(25deg);
+        position: absolute;
+        /*z-index: -1;*/
+        right: 30%;
+    }
+    
+    @media (max-width: 1028px) {
+        #title {
+            text-align: center;        
+        }
+        .title-image {
+            position: static;
+            transform: rotate(0);
+        }
+    }
+    
+    /*Features*/
+    
+    #features {
+        position: relative;
+        /*z-index: 1;*/
+    }
+    
+    .feature-headings {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .feature-box {
+        padding: 5% ;
+    }
+    
+    .feature-headings {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .feature-description {
+        color: 8f8f8f;
+    }
+    
+    .feature-icon {
+        color: #ef8172;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-icon:hover {
+        color: #ff4c68;
+    }
+    
+    /*Testimonial Section*/
+    
+    #testimonials {
+        background-color: #ef8172;
+    }
+    
+    .testimonial-text {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    
+    .testimonial-image {
+        width: 10%;
+        border-radius: 100%;
+        margin: 20px;
+    }
+    
+    #press {
+        background-color: #ef8172;
+        padding-bottom: 3%;
+    }
+    
+    .press-logo {
+        width: 15%;
+        margin: 20px 20px 50px;
+    }
+    
+    .carousel-item {
+        height: 500px;
+    }
+    
+    /*Pricing Section*/
+    
+    #pricing {
+        padding: 100px;
+    }
+    
+    .price-text {
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    
+    .price-category {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .pricing-column {
+        padding: 3% 2%;
+    }
+    
+    /*Footer Section*/
+    
+    .social-media-icons {
+        margin: 20px 10px;
+    }
+    
+    
+    
+    
+    
+    /*
+    
+    
+    /*body {
+        padding: 50px;
+    }*
+    
+    .navbar {
+        
+        padding: 15px;
+        background-color: #82aae3;
+        color: #fff;
+    }
+    
+    .heading {
+        background-color: #fff;
+        color: #91d8e4;
+        /*font-family: 'Montserrat';*
+        font-weight: 900;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .card {
+        background-color: #bfeaf5;
+        color: #fff;
+    }
+    
+    .Button_link {
+        color: #fff;
+    }
+    
+    .Buttonss {
+        width: 50%;
+    }*/
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
+        <form action="/home">
+            <button style="border: 0px solid transparent; color: white;" class="btn btn-outline-dark">HOME</button>
+        </form>
+        <form class="form-inline" action="/logout">
+            <label style="color:white; padding-right: 10px">Hi {{session.get('username')}}!</label>
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+        </form>
+    </nav>
+    <section id="title" class="colored-section first">
+        <center>
+            <h1 class="display-4">Organ Procurement and Management System</h1>
+        </center>
+    </section>
+    <section class="white-section second">
+        <form action="/update_organization_details" method='POST'>
+            <table class="table table-striped table-sm">
+                {% for i in range(0,fields | length) %}
+                <tr>
+                    <th scope="row">{{fields[i]}}</th>
+                    <td>
+                        <input class="form-control" value="{{res[i]}}" name="{{fields[i]}}">
+                    </td>
+                </tr>
+                {%endfor%}
+            </table>
+            <center><button class="btn btn-dark" type="submit">Update Details</button></center>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login Register logout with Jquery ajax, json and MySQLdb and password hash</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat';
+    }
+    
+    p {
+        color: #8f8f8f;
+    }
+    
+    /*Headings*/
+    
+    .big-heading {
+        font-family: 'Montserrat';
+        font-weight: 900;
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    
+    .section-heading {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    
+    /*Containers*/
+    
+    .container-fluid {
+        padding: 7% 15%;
+    }
+    
+    /*Sections*/
+    
+    .colored-section {
+        background-color: #ff4c68;
+        color: #fff;
+    }
+    
+    .white-section {
+        background-color: white;
+    }
+    
+    /*Navigation Bar*/
+    
+    .navbar {
+        padding: 0 0 4.5rem;
+    }
+    
+    .navbar-brand {
+        font-family: 'Ubuntu';
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    
+    .nav-item {
+        padding: 0 18px;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        font-family: 'Montserrat';
+        font-weight: 200;
+    }
+    
+    /*Download Buttons*/
+    
+    .download-button {
+        margin: 5% 3% 5% 0;
+    }
+    
+    /*Title Section*/
+    
+    #title {
+        /*height: 600px;*/
+        text-align: left;
+    }
+    
+    #title .container-fluid {
+        padding: 3% 15% 7%;
+    }
+    
+    /*Title Image*/
+    .title-image {
+        width: 60%;
+        transform: rotate(25deg);
+        position: absolute;
+        /*z-index: -1;*/
+        right: 30%;
+    }
+    
+    @media (max-width: 1028px) {
+        #title {
+            text-align: center;        
+        }
+        .title-image {
+            position: static;
+            transform: rotate(0);
+        }
+    }
+    
+    /*Features*/
+    
+    #features {
+        position: relative;
+        /*z-index: 1;*/
+    }
+    
+    .feature-headings {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .feature-box {
+        padding: 5% ;
+    }
+    
+    .feature-headings {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .feature-description {
+        color: 8f8f8f;
+    }
+    
+    .feature-icon {
+        color: #ef8172;
+        margin-bottom: 1rem;
+    }
+    
+    .feature-icon:hover {
+        color: #ff4c68;
+    }
+    
+    /*Testimonial Section*/
+    
+    #testimonials {
+        background-color: #ef8172;
+    }
+    
+    .testimonial-text {
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+    
+    .testimonial-image {
+        width: 10%;
+        border-radius: 100%;
+        margin: 20px;
+    }
+    
+    #press {
+        background-color: #ef8172;
+        padding-bottom: 3%;
+    }
+    
+    .press-logo {
+        width: 15%;
+        margin: 20px 20px 50px;
+    }
+    
+    .carousel-item {
+        height: 500px;
+    }
+    
+    /*Pricing Section*/
+    
+    #pricing {
+        padding: 100px;
+    }
+    
+    .price-text {
+        font-weight: 700;
+        font-size: 3.5rem;
+        line-height: 1.5;
+    }
+    
+    .price-category {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    
+    .pricing-column {
+        padding: 3% 2%;
+    }
+    
+    /*Footer Section*/
+    
+    .social-media-icons {
+        margin: 20px 10px;
+    }
+    
+    
+    
+    
+    
+    /*
+    
+    
+    /*body {
+        padding: 50px;
+    }*
+    
+    .navbar {
+        
+        padding: 15px;
+        background-color: #82aae3;
+        color: #fff;
+    }
+    
+    .heading {
+        background-color: #fff;
+        color: #91d8e4;
+        /*font-family: 'Montserrat';*
+        font-weight: 900;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    
+    .card {
+        background-color: #bfeaf5;
+        color: #fff;
+    }
+    
+    .Button_link {
+        color: #fff;
+    }
+    
+    .Buttonss {
+        width: 50%;
+    }*/
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="/">Home</a></li>
+                    <li role="presentation"><a href="/login">Sign In</a></li>
+                    <li role="presentation"><a href="/signUp">Sign Up</a></li>
+                </ul>
+            </nav>
+           
+        </div>
+        <div class="jumbotron">
+            <h2>Login Register logout </h2>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="signUp" role="button">Sign Up</a>
+            </p>
+        </div>
+        
+      
+    </div>
+</body>
+</html>
